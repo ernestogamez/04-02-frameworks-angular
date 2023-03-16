@@ -1,0 +1,54 @@
+<form [formGroup]="loginForm" #lForm="ngForm">
+  <div class="flex-container">
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput [formControl]="userControl" />
+        <small
+          class="text-danger"
+          *ngIf="userControl.hasError('required') && userControl.touched"
+        >
+          El nombre es obligatorio
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="userControl.hasError('email') && userControl.touched"
+        >
+          El nombre debe ser en formato e-mail
+        </small>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input
+          name="password"
+          matInput
+          type="password"
+          [formControl]="passControl"
+        />
+        <small
+          class="text-danger"
+          *ngIf="passControl.hasError('required') && passControl.touched"
+        >
+          La password es obligatoria
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="passControl.hasError('minlength') && passControl.touched"
+        >
+          La password debe tener
+          {{ passControl.errors!["minlength"].requiredLength }} caracteres
+          mínimo. Tiene sólamente
+          {{ passControl.errors!["minlength"].actualLength }}
+        </small>
+      </mat-form-field>
+    </p>
+    <p>
+      <!-- Utilizamos otra variable de plantilla (esta vez extendida de la clase ngForm) para deshabilitar el botón si algún campo no es válido: -->
+      <button mat-stroked-button [disabled]="lForm.invalid" (click)="login()">
+        Login
+      </button>
+    </p>
+  </div>
+</form>

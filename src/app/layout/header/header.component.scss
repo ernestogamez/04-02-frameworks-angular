@@ -1,0 +1,36 @@
+.header-background {
+  background-color: rgba(135,163,255,255);
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+  img {
+    height: 15%;
+    width: 15%;
+  }
+
+  h1 {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 22px;
+      letter-spacing: 6px;
+      word-spacing: -0.2px;
+      color: #FFFFFF;
+      font-weight: 700;
+      text-decoration: none;
+      font-style: normal;
+      font-variant: small-caps;
+      text-transform: capitalize;
+      padding-top: 45px;
+  }
+
+  p {
+    padding-top: 40px;
+  }
+
+  .userInfo {
+    display: flex;
+    margin-left: auto;
+    align-items: baseline;
+  }
+}

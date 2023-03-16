@@ -1,0 +1,20 @@
+<!-- La directiva routerLinkActive permite poner una class al elemento que coincida con la ruta actual. -->
+<!-- <ul class="menu">
+  <li routerLinkActive="selected"><a routerLink="/home">Home</a></li>
+  <li routerLinkActive="selected"><a routerLink="/login">Login</a></li>
+  <li routerLinkActive="selected"><a routerLink="/about">About</a></li>
+  <li routerLinkActive="selected"><a routerLink="/dashboard">Dashboard</a></li>
+  <li routerLinkActive="selected"><a routerLink="/gallery">Galería</a></li>
+  <li routerLinkActive="selected"><a routerLink="/crud">CRUD</a></li>
+  <li routerLinkActive="selected"><a routerLink="/profile">Profile</a></li>
+</ul> -->
+
+<div class="menu">
+  <a appHighlight *ngIf="!logged" mat-button routerLink="/home" routerLinkActive="selected">Home</a>
+  <a appHighlight *ngIf="!logged" mat-button routerLink="/login" routerLinkActive="selected">Login</a>
+  <a appHighlight *ngIf="!logged" mat-button routerLink="/about" routerLinkActive="selected">About</a>
+  <a appHighlight *ngIf="logged" mat-button routerLink="/dashboard" routerLinkActive="selected">Dashboard</a>
+  <a appHighlight *ngIf="logged" mat-button routerLink="/gallery" routerLinkActive="selected">Gallery</a>
+  <a appHighlight *ngIf="logged" mat-button routerLink="/crud" routerLinkActive="selected">CRUD</a>
+  <a appHighlight *ngIf="logged" mat-button routerLink="/profile" routerLinkActive="selected">Profile</a>
+</div>

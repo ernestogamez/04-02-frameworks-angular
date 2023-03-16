@@ -1,0 +1,13 @@
+.selected {
+  background-color: rgba(232, 60, 2, 0.7);
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
